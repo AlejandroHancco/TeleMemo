@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <!-- Toolbar superior -->
+    <!-- Barra de herramientas en la parte superior de la pantalla -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -15,12 +15,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:navigationIcon="@android:drawable/ic_menu_revert">
-
+        <!-- Esta barra de herramientas tiene un icono de retroceso para volver atrás -->
     </androidx.appcompat.widget.Toolbar>
 
-
-    <!-- Contenido principal dentro de ScrollView -->
-
+    <!-- Botón que aparece como un ícono de historial en la parte superior derecha -->
     <ImageButton
         android:id="@+id/btnHistorial"
         android:layout_width="48dp"
@@ -34,7 +32,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@android:color/white" />
+    <!-- Este botón permite ver el historial de juegos anteriores al hacer clic en él -->
 
+    <!-- ScrollView permite que todo el contenido pueda moverse hacia arriba o abajo si no cabe en la pantalla -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -44,6 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <!-- Aquí colocamos todos los elementos dentro de un LinearLayout, que se organiza de arriba a abajo -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -51,6 +52,7 @@
             android:padding="16dp"
             android:gravity="center">
 
+            <!-- Muestra la temática del juego, por ejemplo, "Ciberseguridad" o "Ópticas" -->
             <TextView
                 android:id="@+id/textTematica"
                 android:layout_width="wrap_content"
@@ -59,7 +61,9 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp" />
+            <!-- Este texto dirá cuál es el tema que estamos jugando, como Software, Ciberseguridad, etc. -->
 
+            <!-- Este GridLayout es donde se colocan las palabras para que el jugador pueda elegirlas -->
             <GridLayout
                 android:id="@+id/gridPalabras"
                 android:layout_width="wrap_content"
@@ -69,7 +73,9 @@
                 android:alignmentMode="alignMargins"
                 android:useDefaultMargins="true"
                 android:layout_gravity="center_horizontal" />
+            <!-- Aquí se mostrarán las palabras que el jugador tiene que adivinar en forma de botones -->
 
+            <!-- Muestra el número de intentos que ha hecho el jugador durante el juego -->
             <TextView
                 android:id="@+id/textIntentos"
                 android:layout_width="wrap_content"
@@ -77,7 +83,9 @@
                 android:text="Intentos: 0"
                 android:textSize="16sp"
                 android:layout_marginBottom="12dp" />
+            <!-- Este texto muestra cuántos intentos ha hecho el jugador hasta el momento -->
 
+            <!-- Botón que reinicia el juego y empieza de nuevo -->
             <Button
                 android:id="@+id/btnNuevoJuego"
                 android:layout_width="wrap_content"
@@ -85,6 +93,8 @@
                 android:text="Nuevo Juego"
                 android:layout_marginTop="24dp"
                 android:layout_gravity="center_horizontal" />
+            <!-- Este botón inicia un nuevo juego desde el principio cuando el jugador hace clic en él -->
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

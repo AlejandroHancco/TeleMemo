@@ -9,6 +9,7 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
+    <!-- Barra de herramientas en la parte superior -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
@@ -18,13 +19,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- LinearLayout para centrar el contenido -->
+        <!-- LinearLayout dentro de la Toolbar para centrar el título -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center">
 
+            <!-- Título centrado en la Toolbar -->
             <TextView
                 android:id="@+id/toolbarTitle"
                 android:layout_width="wrap_content"
@@ -37,6 +39,7 @@
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
+    <!-- Contenedor principal del contenido debajo de la Toolbar -->
     <LinearLayout
         android:id="@+id/mainContent"
         android:orientation="vertical"
@@ -49,6 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <!-- Título que da la bienvenida al usuario -->
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
@@ -58,6 +62,7 @@
             android:textStyle="bold"
             android:layout_marginBottom="24dp"/>
 
+        <!-- Imagen que representa un satélite -->
         <ImageView
             android:id="@+id/icon"
             android:layout_width="100dp"
@@ -65,6 +70,7 @@
             android:src="@drawable/satelite"
             android:layout_marginBottom="32dp"/>
 
+        <!-- Botón para elegir "Software" -->
         <Button
             android:id="@+id/btnSoftware"
             android:layout_width="match_parent"
@@ -72,6 +78,7 @@
             android:text="Software"
             android:layout_marginBottom="16dp"/>
 
+        <!-- Botón para elegir "Ciberseguridad" -->
         <Button
             android:id="@+id/btnCiberseguridad"
             android:layout_width="match_parent"
@@ -79,6 +86,7 @@
             android:text="Ciberseguridad"
             android:layout_marginBottom="16dp"/>
 
+        <!-- Botón para elegir "Ópticas" -->
         <Button
             android:id="@+id/btnOpticas"
             android:layout_width="match_parent"

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <!-- Toolbar superior -->
+    <!-- Barra de herramientas en la parte superior -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarHistorial"
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:navigationIcon="@android:drawable/ic_menu_revert" />
 
-    <!-- Contenido principal dentro de ScrollView -->
+    <!-- Contenido principal dentro de un ScrollView para que sea desplazable -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -25,6 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
+        <!-- LinearLayout para organizar todo el contenido de manera vertical -->
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -32,6 +33,7 @@
             android:padding="16dp"
             android:gravity="center">
 
+            <!-- Título de la temática que será mostrado -->
             <TextView
                 android:id="@+id/textTematica"
                 android:layout_width="wrap_content"
@@ -41,6 +43,7 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="12dp" />
 
+            <!-- Rejilla de palabras (se llenará dinámicamente en la actividad) -->
             <GridLayout
                 android:id="@+id/gridPalabras"
                 android:layout_width="wrap_content"
@@ -51,6 +54,7 @@
                 android:useDefaultMargins="true"
                 android:layout_gravity="center_horizontal" />
 
+            <!-- Texto que muestra el número de intentos -->
             <TextView
                 android:id="@+id/textIntentos"
                 android:layout_width="wrap_content"
@@ -59,6 +63,7 @@
                 android:textSize="16sp"
                 android:layout_marginBottom="12dp" />
 
+            <!-- Botón para iniciar un nuevo juego -->
             <Button
                 android:id="@+id/btnNuevoJuego"
                 android:layout_width="wrap_content"
